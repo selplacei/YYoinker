@@ -36,16 +36,16 @@ if not out_path.exists():
 if args.video:
 	ytdl_args = [
 		'youtube-dl',
+		'--ignore-errors',
 		'--geo-bypass',
-		'--no-playlist',
 		'--add-metadata',
 		'-o', f'{out_path.resolve()}/%(title)s.%(ext)s'
 	] + ytdl_args
 else:
 	ytdl_args = [
 		'youtube-dl',
+		'--ignore-errors',
 		'--geo-bypass',
-		'--no-playlist',
 		'--extract-audio',
 		'--audio-format', 'best',
 		'--audio-quality', '0',
