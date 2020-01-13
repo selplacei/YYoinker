@@ -25,6 +25,7 @@ if args.batch_file == '-':
 else:
 	with open(args.batch_file) as l:
 		urls += l.read().split(args.sep)
+urls = set(urls)
 
 out_path = pathlib.Path(args.o)
 if out_path.exists() and not out_path.is_dir():
@@ -53,7 +54,6 @@ else:
 		'-o', f'{out_path.resolve()}/%(title)s.%(ext)s',
 		'--metadata-from-title', '%(artist)s - %(track)s'
 	]
-ytdl_args += args.youtube_dl_options
 
 for url in urls:
 	try:
