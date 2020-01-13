@@ -5,6 +5,10 @@ Features in addition to youtube-dl:
 - Take input from STDIN or a batch file, with customizable separators
 - Several default parameters for both video and audio downloads.
 
+Dependencies:
+- youtube-dl
+- Optional: AtomicParsley, for embedding metadata into m4a files
+
 Example usage:  
 `./yyoinker.py -o ~/Music/Lofi --batch-file=~/urls.txt`  
 All you have to do is put a list of URLs into ~/urls.txt, and voila, all the audio files are downloaded.
