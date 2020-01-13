@@ -6,7 +6,9 @@ Features in addition to youtube-dl:
 - Several default parameters for both video and audio downloads.
 
 Example usage:  
-`yyoinker -o ~/Music/Lofi --batch-file=~/urls.txt`  
+`./yyoinker.py -o ~/Music/Lofi --batch-file=~/urls.txt`  
 All you have to do is put a list of URLs into ~/urls.txt, and voila, all the audio files are downloaded.
+
+Enter `./yyoinker.py -h` for detailed help.
 
 ### License: MIT
