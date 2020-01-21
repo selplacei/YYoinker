@@ -39,7 +39,8 @@ if args.video:
 		'--ignore-errors',
 		'--geo-bypass',
 		'--add-metadata',
-		'-o', f'{out_path.resolve()}/%(title)s.%(ext)s'
+		'-o', f'{out_path.resolve()}/%(title)s.%(ext)s',
+		'--download-archive', f'{out_path.resolve()}/archive.txt'
 	] + ytdl_args
 else:
 	ytdl_args = [
@@ -52,6 +53,7 @@ else:
 		'--embed-thumbnail',
 		'--add-metadata',
 		'-o', f'{out_path.resolve()}/%(title)s.%(ext)s',
+		'--download-archive', f'{out_path.resolve()}/archive.txt',
 		'--metadata-from-title', '%(artist)s - %(track)s'
 	] + ytdl_args
 
