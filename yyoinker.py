@@ -50,7 +50,6 @@ else:
 		'--extract-audio',
 		'--audio-format', 'best',
 		'--audio-quality', '0',
-		'--embed-thumbnail',
 		'--add-metadata',
 		'-o', f'{out_path.resolve()}/%(title)s.%(ext)s',
 		'--download-archive', f'{out_path.resolve()}/archive.txt',
